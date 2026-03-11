@@ -8,10 +8,14 @@ repositories {
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    implementation("org.seleniumhq.selenium:selenim-java:4.38.0")
 }
 
 application {
     mainClass = 'org.example.Main'
+}
+test{
+    useTestNG()
 }
 tasks.register('prepareDocs', Copy) {
     description = 'Copies HTML, CSS, and images to the docs folder.'
